@@ -5,8 +5,13 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  async sendMessage(@Query('message') message): Promise<void> {
-    return await this.appService.sendMessage(message);
+  @Get('singlemessage')
+  async sendSingleMessage(@Query('message') message): Promise<void> {
+    return await this.appService.sendSingleMessage(message);
+  }
+
+  @Get('endlessmessages')
+  async sendEndlessMessages(): Promise<void> {
+    return await this.appService.sendEndlessMessages();
   }
 }

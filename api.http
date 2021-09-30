@@ -1,0 +1,11 @@
+### single message with error
+GET http://localhost:3000/singlemessage?message=minhamensagemerro
+Content-Type: application/x-www-form-urlencoded
+
+### single message without error
+GET http://localhost:3000/singlemessage?message=minhamensagem
+Content-Type: application/x-www-form-urlencoded
+
+### endless messages
+GET http://localhost:3000/endlessmessages
+Content-Type: application/x-www-form-urlencoded
